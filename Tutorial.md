@@ -5,7 +5,7 @@ email:    @mail.org
 
 version:  0.0.1
 
-language: en
+language: de
 
 narrator: Deutsch Female
 
@@ -57,6 +57,35 @@ comment:  Try to write a short comment about
   - Explizite Formatierung mit Markdown, Nachvollziehbarkeit der Veränderungen,
   - Einbettung in Entwicklungsumgebung
 
+
+## Quellen
+
+* __Projekt-Website:__ https://LiaScript.github.io
+* __Open-Source:__ https://github.com/liascript
+* __YouTube:__ https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
+* __Wieteres:__
+
+  - Dokumentation: https://github.com/LiaScript/docs
+  - Bücher: https://github.com/topics/liascript-course
+  - Templates: https://github.com/topics/liascript-template
+  - Talks & ...: https://github.com/LiaPlayground
+  - Blog: https://aizac.herokuapp.com
+
+* __Editor:__
+
+  - Atom: https://atom.io
+
+    - Liascript-Preview: https://atom.io/packages/liascript-preview
+    - Liascript-Snippets: https://atom.io/packages/liascript-snippets
+
+  - VSCode: https://code.visualstudio.com/Download
+
+    - LiaScript-Preview: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview
+    - LiaScript-Snippets: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets
+
+* __Development-Server:__ https://www.npmjs.com/package/@liascript/devserver
+
+* __Exporter:__ https://www.npmjs.com/package/@liascript/exporter
 
 ## Git & GitHub
 
@@ -206,8 +235,34 @@ Quellen:
   - Übernehmen der Änderungen aus einem ___branch___ in einen anderen
 
 
-### Verbinden von Atom und GitHub
+### Setup Entwicklungsumgebung
 
+1. Download und Installation von Atom: https://atom.io
+2. Installation von PlugIns:
+
+   - [LiaScript-Preview](https://atom.io/packages/liascript-preview)
+   - [LiaScript-Snippets](https://atom.io/packages/liascript-snippets)
+   - [Markdown-Table-Editor](https://github.com/susisu/atom-markdown-table-editor)
+
+---
+
+1. Download und Installation von VSCode: https://code.visualstudio.com/Download
+2. Installation von PlugIns:
+
+   - [LiaScript-Preview](https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview)
+   - [LiaScript-Snippets](https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets)
+
+    {{1}}
+> # Wichtige Tastenkombination:
+>
+> * Fuzzy Suche: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+> * Speichern: <kbd>Shift</kbd> + <kbd>S</kbd>
+> * Verschieben von Zeilen: <kbd>Ctrl</kbd> + <kbd>ᐃ/ᐁ</kbd>
+> * __LiaScript__:
+>
+>   - Snippets: <kbd>l</kbd> <kbd>i</kbd> <kbd>a</kbd>
+>   - Programmiersprachen: <kbd>h</kbd> <kbd>i</kbd> <kbd>l</kbd> <kbd>i</kbd>
+>   - Stimmen: <kbd>v</kbd> <kbd>o</kbd> <kbd>i</kbd> <kbd>c</kbd> <kbd>e</kbd>
 
 ## Teilen von Kursen via ...
 
@@ -271,6 +326,20 @@ Quellen:
 
 #### 9. HTML
 
+Übersicht über alle HTML-Tags: https://www.w3schools.com/TAgs/default.asp
+
+##### `<details>` & `<summary>`
+
+<details style="background: #EEE">
+
+<summary>**Honest Textbook ads (click to enlarge)**</summary>
+
+https://www.youtube.com/watch?v=lhSjYT7pWkw
+
+</details>
+
+##### `<lia-keep>`
+
 ## LiaScript Tutorial
 
 ### Multimedia
@@ -307,8 +376,27 @@ Blöcke<!-- style="background: green" --> und einzelne Elemente<!-- style="borde
   `padding: 3px` oder `padding-top: ..` oder `padding-left`
   oder `margin: 3px` oder `margin-top: ..` oder `margin-left`
 
+##### Kontrolle der Übersetzung
 
-#### Präsentationsformate
+> Mithilfe von `class="translate"` oder `class="notranslate"` können Element markiert werden, die übersetzt bzw. nicht übersetzt werden sollen.
+
+---
+
+**Beispiel:**
+
+```` markdown
+<!-- class="notranslate" -->
+Alle Code-Elemente werden automatisch mit der Klasse `notranslate` markiert.
+
+<!-- class="translate" -->
+``` javascript
+console.log("Hello World")
+```
+````
+
+### Metainformationen
+
+### Präsentationsformate
 
 Buch/Präsentation/Folien
 
@@ -346,13 +434,13 @@ Oder die Sprache kann geändert werden. Tippe "voice" um
 eine Auswahl der unterstützen Sprachen zu erhalten
 ```
 
-##### Inline Animationen
+#### Inline Animationen
 
 Hallo {2}{Welt, } dies ein Absatz mit internen Animationen {1-2}{**die auch wieder verschwinden können**}.
 
-##### Sprachen Lernen `|>` oder `!>`
+#### Sprachen Lernen `|>` oder `!>`
 
-##### Versteckte Kommentare
+#### Versteckte Kommentare
 
     --{{1}}--
 Dieser Text ist besonders wichtiges Zitat.
@@ -429,7 +517,6 @@ Definition einer Matrix und Nutzung von HTML.
 ```
 @formula
 
-
 ### Quizzes
 
 ### Umfragen
@@ -444,6 +531,7 @@ Definition einer Matrix und Nutzung von HTML.
 
 ### Zeichnen mit ASCII-Art
 
+#### Diagramme
 
                                     Multiline
     1.9 |    DOTS
@@ -458,15 +546,220 @@ Definition einer Matrix und Nutzung von HTML.
      -1 +------------------------------------
         0              x-axis               1
 
+#### Code als Bild
+
+Dokumentation: https://github.com/andre-dietrich/elm-svgbob
+
+```` ascii
+  .-----.
+  |.---.|
+  ||   ||  device
+  |.___.|  loads
+  | ooo |----+--------------------------+--------------------------.
+  | ooo |    |                          |                          |
+  | ooo |    |                          |                          |
+  '_____'    |                          |                          |
+             |                          |                          |
+             v                          v                          v
+   +-------------------+  .---------------------------.  +-------------------+
+   | Loadable module C |  |     Loadable module A     |  | Loadable module B |
+   +---------+---------+  |---------------------------|  |   (instrumented)  |
+             |            |         .-----.           |  +----------+--------+
+             '--------------------> | A.o |           |             |
+                 calls    |         '-----'           |             |
+                          |    .------------------.   |             |
+                          |   / A.instrumented.o / <----------------'
+                          |  '------------------'     |    calls
+                          '---------------------------'
+````
+
+
+
+````````````````````````````````
+  ┌─┬┐  ╔═╦╗  ╓─╥╖  ╒═╤╕
+  │ ││  ║ ║║  ║ ║║  │ ││
+  ├─┼┤  ╠═╬╣  ╟─╫╢  ╞═╪╡
+  └─┴┘  ╚═╩╝  ╙─╨╜  ╘═╧╛
+  ┌───────────────────┐
+  │  ╔═══╗ Some Text  │▒
+  │  ╚═╦═╝ in the box │▒
+  ╞═╤══╩══╤═══════════╡▒
+  │ ├──┬──┤           │▒
+  │ └──┴──┘           │▒
+  └───────────────────┘▒
+   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+````````````````````````````````
+
+
+#### Weiteres
+
+
 
 ### Spaß mit Tabellen
 
 
-### Erweiterungen
+## Erweiterungen
 
-#### Wo finde ich Erweiterungen
+### Wo finde ich Erweiterungen
 
-#### Wie erstelle ich eigene Erweiterungen
+https://github.com/topics/liascript-template
+
+ <a href="https://www.w3schools.com/" target="_parent" rel="noopener noreferrer">Visit W3Schools!</a>
+
+### Wie erstelle ich eigene Erweiterungen
 
 
 ## Export zu anderen Formaten
+
+1. Download von [NodeJS](https://de.wikipedia.org/wiki/Node.js):
+   https://nodejs.org/de/download/
+
+2. Download des LiaScript-Exporters:
+   https://www.npmjs.com/package/@liascript/exporter
+
+
+## Ein Ausblick: JavaScript
+
+Das Quadrat von
+<script output="x" input="range" value="1" min="0" max="1000" step="0.1">
+@input
+</script>
+ist gleich ==>
+<script> @input(`x`) * @input(`x`)</script>
+
+### Tabellen und Code
+<!--
+sin: <script format="number"
+             localeStyle="currency"
+             currency="EUR"
+             locale="de-DE"
+             modify="false"
+    > Math.sin(@input(`result`) + @input(`amp`) * @0) </script>
+-->
+
+Pos: <script run-once
+        default="0"
+        output="result"
+        input="range" value="2" min="0" max="25" step="0.1"
+        >
+@input
+</script>
+and amplitude:
+<script run-once
+        default="0"
+        output="amp"
+        input="range" value="1" min="0" max="2" step="0.1"
+        >
+@input
+</script>
+
+
+<!-- data-type="barchart" id="tabelle" -->
+| Header 1 | <script>@input(`result`)</script> |
+|:-------- |--------: |
+| 1        | @sin(1)  |
+| 2        | @sin(2)  |
+| 3        | @sin(3)  |
+| 4        | @sin(4)  |
+| 5        | @sin(5)  |
+| 6        | @sin(6)  |
+| 7        | @sin(7)  |
+| 8        | @sin(8)  |
+| 9        | @sin(9)  |
+
+
+### Diagramme
+
+The first value defines some kind of range:
+<script input="range" value="2" output="range">@input</script>
+, while the second can be interpreted as range
+<script input="range" value="50" output="amplitude">@input</script>.
+You can double-click on any gray element to inspect and edit its javascript code.
+
+
+<script run-once style="display: inline-block; width: 100%">
+function func(x) {
+    x /= 10;
+    return Math.sin(x) * Math.cos(x * @input(`range`) + 1) * Math.sin(x * 3 + 2) * @input(`amplitude`);
+}
+
+function generateData() {
+    let data = [];
+    for (let i = -200; i <= 200; i += 0.1) {
+        data.push([i, func(i)]);
+    }
+    return data;
+}
+
+let option = {
+    animation: false,
+    grid: {
+        top: 40,
+        left: 50,
+        right: 40,
+        bottom: 50
+    },
+    xAxis: {
+        name: 'x',
+        minorTick: {
+            show: true
+        },
+        splitLine: {
+            lineStyle: {
+                color: '#999'
+            }
+        },
+        minorSplitLine: {
+            show: true,
+            lineStyle: {
+                color: '#ddd'
+            }
+        }
+    },
+    yAxis: {
+        name: 'y',
+        min: -100,
+        max: 100,
+        minorTick: {
+            show: true
+        },
+        splitLine: {
+            lineStyle: {
+                color: '#999'
+            }
+        },
+        minorSplitLine: {
+            show: true,
+            lineStyle: {
+                color: '#ddd'
+            }
+        }
+    },
+    dataZoom: [{
+        show: true,
+        type: 'inside',
+        filterMode: 'none',
+        xAxisIndex: [0],
+        startValue: -20,
+        endValue: 20
+    }, {
+        show: true,
+        type: 'inside',
+        filterMode: 'none',
+        yAxisIndex: [0],
+        startValue: -20,
+        endValue: 20
+    }],
+    series: [
+        {
+            type: 'line',
+            showSymbol: false,
+            clip: true,
+            data: generateData()
+        }
+    ]
+}
+
+"HTML: <lia-chart option='" + JSON.stringify(option) + "'></lia-chart>"
+
+</script>
